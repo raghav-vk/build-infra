@@ -1,0 +1,5 @@
+---
+# file: buildcmtools.yml
+- hosts: buildtools
+  roles:
+    - common

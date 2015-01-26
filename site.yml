@@ -1,0 +1,6 @@
+---
+# file: site.yml
+- include: buildwebsrv.yml
+- include: buildcmtools.yml
+- include: buildservers.yml
+- include: builddbs.yml

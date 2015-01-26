@@ -1,0 +1,21 @@
+---
+# file: roles/common/tasks/main.yml
+
+- name: Install Java, git, python, ansible, docker
+  yum: name={{ item }} state=present
+  with_items:
+	- git
+	- libsemanage-python
+	- libselinux-python
+	- easy_install
+	- pip
+
+- name: Install python modules needed for ansible
+  pip: name={{ item }} state=present
+  with_items:
+	- paramiko 
+	- PyYAML 
+	- Jinja2
+ 	- httplib2
+
+
